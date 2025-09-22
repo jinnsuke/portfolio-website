@@ -3,6 +3,9 @@ import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Education from '@/components/sections/Education';
 import Experience from '@/components/sections/Experience';
+import Skills from '@/components/sections/Skills';
+import Projects from '@/components/sections/Projects';
+import Contact from '@/components/sections/Contact';
 
 export default function Home() {
   return (
@@ -26,27 +29,9 @@ export default function Home() {
         <About />
         <Education />
         <Experience />
-
-      <section id="skills" className="section-padding container">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-8">Skills</h2>
-          <p className="text-foreground-secondary">Coming soon...</p>
-        </div>
-      </section>
-
-      <section id="projects" className="section-padding container">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-8">Projects</h2>
-          <p className="text-foreground-secondary">Coming soon...</p>
-        </div>
-      </section>
-
-      <section id="contact" className="section-padding container">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-8">Contact</h2>
-          <p className="text-foreground-secondary">Coming soon...</p>
-        </div>
-      </section>
+        <Skills />
+        <Projects />
+        <Contact />
       </div>
     </main>
   );

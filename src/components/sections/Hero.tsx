@@ -6,8 +6,13 @@ const Hero = () => {
   };
 
   const downloadResume = () => {
-    // TODO: Implement resume download functionality
-    console.log('Resume download clicked');
+    // Create a temporary link element to trigger download
+    const link = document.createElement('a');
+    link.href = '/files/Sugimoto_Shoujin_Resume.pdf';
+    link.download = 'Sugimoto_Shoujin_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -23,14 +28,14 @@ const Hero = () => {
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl lg:text-3xl text-foreground-secondary mb-8 max-w-4xl mx-auto leading-relaxed">
-            Product Manager leveraging{' '}
-            <span className="text-accent-primary font-semibold">AI and data</span>{' '}
-            to build impactful, user-centric products
+            I build{' '}
+            <span className="text-accent-primary font-semibold">AI products</span>{' '}
+            that users actually want
           </p>
 
           {/* Personality hook */}
           <p className="text-lg md:text-xl text-foreground-secondary/80 mb-12 max-w-3xl mx-auto">
-            Boxer • Street Dancer • Solo-Backpacker • Entrepreneur
+            Boxer • Street Dancer • Solo-Backpacker • Product Builder
           </p>
 
           {/* CTA Buttons */}
@@ -51,12 +56,6 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-foreground-secondary rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-foreground-secondary rounded-full mt-2 animate-pulse"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

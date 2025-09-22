@@ -7,7 +7,7 @@ interface ExperienceItem {
   type: string;
   achievements: string[];
   skills: string[];
-  color: string;
+  logo: string;
 }
 
 const Experience = () => {
@@ -19,7 +19,7 @@ const Experience = () => {
       type: "Internship",
       achievements: ["95% claim processing time reduction with OCR web app"],
       skills: [],
-      color: "from-purple-500 to-purple-700"
+      logo: "boston-scientific-logo.png"
     },
     {
       company: "NUS (School of Computing)",
@@ -28,16 +28,7 @@ const Experience = () => {
       type: "Part-time",
       achievements: ["Mentored 100+ students in advanced Java & programming"],
       skills: [],
-      color: "from-indigo-500 to-indigo-700"
-    },
-    {
-      company: "E-Commerce Entrepreneur",
-      role: "Solo Entrepreneur",
-      period: "Jun - Sep 2024",
-      type: "Self-employed",
-      achievements: ["4-figure revenue in first week, $10K total in 3 months"],
-      skills: [],
-      color: "from-orange-500 to-orange-700"
+      logo: "nus-logo.png"
     },
     {
       company: "SCB 10X",
@@ -46,7 +37,7 @@ const Experience = () => {
       type: "Internship",
       achievements: ["96.9% labor reduction with multi-agent AI pipeline"],
       skills: [],
-      color: "from-blue-500 to-blue-700"
+      logo: "scb10x-logo.jpg"
     },
     {
       company: "Wego.com",
@@ -55,7 +46,7 @@ const Experience = () => {
       type: "Internship",
       achievements: ["3% improvement over legacy ML search model"],
       skills: [],
-      color: "from-green-500 to-green-700"
+      logo: "wego-logo.jpeg"
     },
     {
       company: "Wego.com",
@@ -64,7 +55,7 @@ const Experience = () => {
       type: "Internship",
       achievements: ["Shipped time-filter feature end-to-end: 3% usage increase, 5% efficiency gain"],
       skills: [],
-      color: "from-green-600 to-green-800"
+      logo: "wego-logo.jpeg"
     },
     {
       company: "AIMMS",
@@ -73,7 +64,7 @@ const Experience = () => {
       type: "Internship",
       achievements: ["Sales forecasting model with Python & Prophet"],
       skills: [],
-      color: "from-teal-500 to-teal-700"
+      logo: "aimms-logo.png"
     },
     {
       company: "Analytix",
@@ -82,7 +73,7 @@ const Experience = () => {
       type: "Internship",
       achievements: ["End-to-end data workflows & Tableau dashboards"],
       skills: [],
-      color: "from-cyan-500 to-cyan-700"
+      logo: "analytix-logo.png"
     },
     {
       company: "Emirates Group",
@@ -91,7 +82,7 @@ const Experience = () => {
       type: "Internship",
       achievements: ["Innovation analysis for senior leadership"],
       skills: [],
-      color: "from-red-500 to-red-700"
+      logo: "emirates-group-logo.png"
     }
   ];
 
@@ -127,7 +118,11 @@ const Experience = () => {
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <div className="flex items-center space-x-2 mb-1">
-                          <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${exp.color}`}></div>
+                          <img
+                            src={`/images/logos/${exp.logo}`}
+                            alt={`${exp.company} logo`}
+                            className="w-8 h-8 object-contain"
+                          />
                           <h3 className="text-xl font-bold text-foreground">{exp.company}</h3>
                         </div>
                         <h4 className="text-lg font-semibold text-accent-primary">{exp.role}</h4>
@@ -156,19 +151,19 @@ const Experience = () => {
           <h3 className="text-2xl font-semibold text-foreground mb-8">Key Highlights</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-background-secondary rounded-xl border border-border">
-              <div className="text-4xl font-bold text-accent-primary mb-2">9</div>
-              <div className="text-foreground font-medium mb-2">Professional Roles</div>
+              <div className="text-4xl font-bold text-accent-primary mb-2">7</div>
+              <div className="text-foreground font-medium mb-2">Internship Roles</div>
               <div className="text-foreground-secondary text-sm">Across AI, Data, and Product domains</div>
             </div>
             <div className="p-6 bg-background-secondary rounded-xl border border-border">
-              <div className="text-4xl font-bold text-accent-primary mb-2">3.5+</div>
-              <div className="text-foreground font-medium mb-2">Years Experience</div>
+              <div className="text-4xl font-bold text-accent-primary mb-2">2+</div>
+              <div className="text-foreground font-medium mb-2">Years Internship Experience</div>
               <div className="text-foreground-secondary text-sm">From Business Analysis to AI Product Management</div>
             </div>
             <div className="p-6 bg-background-secondary rounded-xl border border-border">
-              <div className="text-4xl font-bold text-accent-primary mb-2">8</div>
+              <div className="text-4xl font-bold text-accent-primary mb-2">7</div>
               <div className="text-foreground font-medium mb-2">Industry Sectors</div>
-              <div className="text-foreground-secondary text-sm">MedTech, Venture Capital, TravelTech, Logistics, Aviation, Consulting, Education, E-Commerce</div>
+              <div className="text-foreground-secondary text-sm">MedTech, Venture Capital, TravelTech, Logistics, Aviation, Consulting, Education</div>
             </div>
           </div>
         </div>
